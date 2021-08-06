@@ -1,31 +1,19 @@
-# Your custom Twilio Flex Plugin
+# Opionionated template for Flex Plugin
 
-Twilio Flex Plugins allow you to customize the appearance and behavior of [Twilio Flex](https://www.twilio.com/flex). If you want to learn more about the capabilities and how to use the API, check out our [Flex documentation](https://www.twilio.com/docs/flex).
+This template is based on the [Typsecript scaffolding](https://github.com/twilio/flex-plugin-builder/tree/main/packages/create-flex-plugin/templates/ts) for a new Flex Plugin, with the addition of [`twilio-style`](https://github.com/twilio-labs/twilio-style)
 
-## Setup
+# Usage 
 
-Make sure you have [Node.js](https://nodejs.org) as well as [`npm`](https://npmjs.com). We support Node >= 10.12 (and recommend the _even_ versions of Node). Afterwards, install the dependencies by running `npm install`:
+In order to use this plugin, follow the [instructions](https://github.com/twilio/flex-plugin-builder/tree/main/packages/plugin-flex) to install Twilio CLI and Twilio Flex Plugin CLI, and then run the following command: 
 
-```bash
-cd 
-
-# If you use npm
-npm install
+```
+twilio flex:plugins:create --template=https://github.com/vernig/flex-plugin-opinionated-template <mame-of-your-awesome-plugin>
 ```
 
-Next, please install the [Twilio CLI](https://www.twilio.com/docs/twilio-cli/quickstart) by running:
+Please note that (differently from the scaffolding template) the name of the actual plugin is `MyTemplatePlugin`. If you want to change the name, you have to change: 
 
-```bash
-brew tap twilio/brew && brew install twilio
-```
-
-Finally, install the [Flex Plugin extension](https://github.com/twilio-labs/plugin-flex/tree/v1-beta) for the Twilio CLI:
-
-```bash
-twilio plugins:install @twilio-labs/plugin-flex@beta
-```
-
-## Development
-
-Run `twilio flex:plugins --help` to see all the commands we currently support. For further details on Flex Plugins refer to our documentation on the [Twilio Docs](https://www.twilio.com/docs/flex/developer/plugins/cli) page.
-
+* `PLUGIN_NAME` value in `src/MyTemplatePlugin.tsx`
+* Name of the class in `src/MyTemplatePlugin.tsx`
+* Rename `src/MyTemplatePlugin.tsx`
+* Change the `import` statement in `src/index.ts`
+* Change the argument of `loadPlugin()` in `src/index.ts`
