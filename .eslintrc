@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "twilio-react",
+    "twilio-ts"
+  ]
+}
