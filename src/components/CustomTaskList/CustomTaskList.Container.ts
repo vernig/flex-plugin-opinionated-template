@@ -1,7 +1,7 @@
-import { AppState } from '../../states';
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
 
+import { AppState } from '../../states';
 import { Actions } from '../../states/CustomTaskListState';
 import CustomTaskList from './CustomTaskList';
 
@@ -14,7 +14,7 @@ export interface DispatchToProps {
 }
 
 const mapStateToProps = (state: AppState): StateToProps => ({
-  isOpen: state['mytemplate'].customTaskList.isOpen,
+  isOpen: state.mytemplate.customTaskList.isOpen,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<any>): DispatchToProps => ({
