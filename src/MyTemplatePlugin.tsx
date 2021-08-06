@@ -2,7 +2,7 @@ import React from 'react';
 import * as Flex from '@twilio/flex-ui';
 import { FlexPlugin } from 'flex-plugin';
 
-import CustomTaskListContainer from './components/CustomTaskList/CustomTaskList.Container';
+import DismissibleAlertContainer from './components/DismissibleAlert/DismissibleAlert.Container';
 import reducers, { namespace } from './states';
 
 const PLUGIN_NAME = 'MyTemplatePlugin';
@@ -23,7 +23,7 @@ export default class MyTemplatePlugin extends FlexPlugin {
     this.registerReducers(manager);
 
     const options: Flex.ContentFragmentProps = { sortOrder: -1 };
-    flex.AgentDesktopView.Panel1.Content.add(<CustomTaskListContainer key="MyTemplatePlugin-component" />, options);
+    flex.AgentDesktopView.Panel1.Content.add(<DismissibleAlertContainer key="MyTemplatePlugin-component" />, options);
   }
 
   /**

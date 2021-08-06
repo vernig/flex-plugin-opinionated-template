@@ -2,11 +2,11 @@ import { Action } from '.';
 
 const ACTION_DISMISS_BAR = 'DISMISS_BAR';
 
-export interface CustomTaskListState {
+export interface DismissibleAlertState {
   isOpen: boolean;
 }
 
-const initialState: CustomTaskListState = {
+const initialState: DismissibleAlertState = {
   isOpen: true,
 };
 
@@ -14,7 +14,7 @@ export class Actions {
   public static dismissBar = (): Action => ({ type: ACTION_DISMISS_BAR });
 }
 
-export function reduce(state: CustomTaskListState = initialState, action: Action): CustomTaskListState {
+export function reduce(state: DismissibleAlertState = initialState, action: Action): DismissibleAlertState {
   // Remove the following comment once more Actions are added
   // eslint-disable-next-line sonarjs/no-small-switch
   switch (action.type) {
